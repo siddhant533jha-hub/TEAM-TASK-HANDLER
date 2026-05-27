@@ -39,7 +39,7 @@
     "react-dom": "^18.2.0",
     "recharts": "^2.15.4",
     "tailwindcss": "^3.4.1",
-    "three": "^r128",
+    "three": "^0.161.0",
     "three-mesh-bvh": "^0.7.8",
     "uuid": "^8.3.2"
   },
@@ -49,7 +49,7 @@
     "@types/node": "^20",
     "@types/react": "^18",
     "@types/react-dom": "^18",
-    "@types/three": "^r128",
+    "@types/three": "^0.161.2",
     "@types/uuid": "^9.0.7",
     "autoprefixer": "^10.4.17",
     "eslint": "^8",
