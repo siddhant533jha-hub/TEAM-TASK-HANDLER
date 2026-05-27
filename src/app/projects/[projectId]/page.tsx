@@ -53,8 +53,7 @@ interface Task {
 }
 
 export default function ProjectDetailPage() {
-  const params = useParams<{ projectId: string }>();
-const projectId = params.projectId;
+  const projectId = useParams()?.projectId?.toString() || "";
   const { data: session } = useSession();
   const queryClient = useQueryClient();
   const isAdmin = session?.user?.role === "ADMIN";
