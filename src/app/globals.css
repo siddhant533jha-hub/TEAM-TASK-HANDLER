@@ -1,0 +1,113 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ============================================================
+   NEBULA PROJECT MANAGER - GLOBAL STYLES
+   Dark mode sci-fi theme with neon accents and glassmorphism
+   ============================================================ */
+
+@layer base {
+  :root {
+    --background: 240 10% 4%;
+    --foreground: 0 0% 98%;
+    --card: 240 10% 6%;
+    --card-foreground: 0 0% 98%;
+    --popover: 240 10% 6%;
+    --popover-foreground: 0 0% 98%;
+    --primary: 187 100% 50%;
+    --primary-foreground: 240 10% 4%;
+    --secondary: 240 6% 12%;
+    --secondary-foreground: 0 0% 98%;
+    --muted: 240 6% 12%;
+    --muted-foreground: 240 5% 65%;
+    --accent: 187 100% 50%;
+    --accent-foreground: 240 10% 4%;
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 240 6% 15%;
+    --input: 240 6% 15%;
+    --ring: 187 100% 50%;
+    --radius: 0.75rem;
+  }
+
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-void text-foreground antialiased;
+    background: linear-gradient(135deg, #0a0a0f 0%, #12121a 50%, #0a0a0f 100%);
+    min-height: 100vh;
+  }
+
+  /* Custom scrollbar for dark theme */
+  ::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: #0a0a0f;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: #1a1a2e;
+    border-radius: 4px;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: #2a2a3e;
+  }
+}
+
+@layer components {
+  /* Glassmorphism card utility */
+  .glass {
+    @apply bg-white/5 backdrop-blur-xl border border-white/10;
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+  }
+
+  .glass-strong {
+    @apply bg-white/10 backdrop-blur-2xl border border-white/20;
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.5), 
+                inset 0 1px 0 0 rgba(255, 255, 255, 0.1);
+  }
+
+  /* Neon glow text */
+  .neon-text {
+    text-shadow: 0 0 10px rgba(0, 240, 255, 0.5),
+                 0 0 20px rgba(0, 240, 255, 0.3),
+                 0 0 30px rgba(0, 240, 255, 0.2);
+  }
+
+  /* Cyber button */
+  .cyber-btn {
+    @apply relative overflow-hidden bg-cyber/10 border border-cyber/50 text-cyber 
+           px-6 py-2 rounded-lg font-medium transition-all duration-300;
+  }
+
+  .cyber-btn:hover {
+    @apply bg-cyber/20 border-cyber;
+    box-shadow: 0 0 20px rgba(0, 240, 255, 0.3);
+  }
+
+  /* Status badges */
+  .status-todo {
+    @apply bg-yellow-500/10 text-yellow-400 border border-yellow-500/30;
+  }
+
+  .status-in-progress {
+    @apply bg-blue-500/10 text-blue-400 border border-blue-500/30;
+  }
+
+  .status-done {
+    @apply bg-green-500/10 text-green-400 border border-green-500/30;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
